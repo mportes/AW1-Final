@@ -1,0 +1,596 @@
+@font-face {
+    font-family: Warung;
+    src: url(../fonts/Warung\ Kopi.otf);
+}
+
+@font-face{
+    font-family: Sweet;
+    src: url(../fonts/sweet\ purple.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body  {
+    background: #ff8585;
+    height: 100vh;
+    color: white;
+    font-family: Warung;
+    font-size: 1.7em;
+}
+
+/*----------------------------------------------------------*/
+#logo {
+    width: 5em;
+    padding: 5px;
+}
+
+header {
+    height: 80px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 .2em -2px grey;
+    z-index: 5000;
+    display: flex;
+}
+  
+header div {
+    display: flex;
+    width: 1100px;
+    margin: auto;
+    justify-content: space-around;
+}
+
+#botao {
+    display: none;
+}
+
+.topico {
+   padding: 0.9em;
+}
+  
+.menu a {
+    text-decoration: none;
+    color: #012869;
+    transition: color .3s;
+}
+
+#sexualidade a {
+    color: #ff616d;
+}
+
+.menu a:hover {
+    color: #ff616d;
+}
+  
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+  
+.menu li {
+    list-style: none;
+}
+
+/*----------------------------------------------------------*/
+
+#botao2 {
+    display: none;
+}
+
+.navigation {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    width: 13em;
+    height: calc(100vh - 80px);
+    background-color: #ff616d;
+    padding: 1px;
+    height: calc(100% - 80px);
+}
+
+.navigation ul li{
+    border-radius: 15px;
+    list-style: none;
+    background-color: #ff8585;
+    margin: 0.4em;
+    border: 4px solid #ff8585;
+    padding: 10px;
+    text-align: center;
+    transition: .5s background-color;
+}
+
+.navigation ul li:hover{
+    cursor: pointer;
+}
+
+.navigation ul li.active{
+    list-style: none;
+    background-color: #ff616d;
+    margin: 0.4em;
+    border: 4px solid #ff8585;
+    padding: 10px;
+    text-align: center;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*----------------------------------------------------------*/
+ 
+.op {
+    height: 100vh;
+    padding: 1.5em;
+    padding-top: 1.5em;
+    padding-left: 15em;
+    overflow-y: auto;
+    display: none;
+}
+
+.op.active {
+    display: block;
+}
+
+.texto h2 {
+    font-family: Sweet;
+    font-size: 7em;
+    font-weight: normal;
+    text-align: center;
+}
+
+.texto p{
+    font-size: 36px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    text-align: justify;
+    padding: 0px;
+}
+
+.referencia {
+    font-size: 36px;
+}
+
+.referencia h3 {
+    margin-bottom: 30px;
+}
+
+.referencia p {
+    line-height: 1.1;
+    text-align: left;
+}
+
+.referencia a {
+    color: white;
+    text-decoration: none;
+}
+
+.referencia a:hover {
+    text-decoration: underline;
+}
+
+.imagem {
+    float: left;
+    width: 40%;
+    margin-right: 50px;
+}
+
+.primeiro {
+    margin-top: 70px;
+}
+
+#t1 {
+    color: #590640;
+}
+
+#t2 {
+    color: #b7e1e5;
+}
+
+#t4 {
+    color: #5a81ba;
+}
+
+#t5 {
+    color: #f04d5b;
+}
+
+/*----------------------------------------------------------*/
+#s1, #i1, #l2, #a3 {
+    color: #ff3642;
+}
+
+#e1, #d1, #g1, #p1 {
+    color: #ff731d;
+}
+
+#x1, #a2, #b1, #n1 {
+    color: #ffbf3c;
+}
+
+#u1, #d2, #t3, #mm {
+    color: #5ab56e;
+}
+
+#a1, #e2, #q1 {
+    color: #008dc4;
+}
+
+#l1, #i2 {
+    color: #9761cd;
+}
+
+#musica {
+    text-align: center;
+}
+
+/*----------------------------------------------------------*/
+
+.mais.op {
+    padding: 4em 0em 1.1em 13em;
+}
+
+#extra {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 350px 350px 350px 350px;
+    justify-content: center;
+}
+
+#extra a {
+    text-decoration: none;
+}
+.quadrado {
+    height: 250px;
+    width: 100%;
+    background-color: white;
+    border-radius: 30px;
+    transition: .5s;
+    overflow-y: hidden;
+}
+
+.quadrado:hover {
+    cursor: pointer;
+}
+
+.quadrado h2 {
+    height: 14%;
+    color: rgb(53, 53, 53);
+    font-size: 1.1em;
+
+}
+
+.quadrado p {
+    height: 26%;
+    border-radius: 0px 0px 30px 30px;
+    color: rgb(99, 99, 99);
+    font-size: 0.68em;
+}
+
+.quadrado h2, p {
+    font-family: Warung;
+    padding: 3px 20px;
+    text-align: left;
+}
+
+.quadrado:hover {
+    transform: scale(1.03)
+}
+
+.foto {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+@media(max-width: 1820px) {
+    #extra{
+        grid-template-columns: 350px 350px 350px;
+    }
+}
+
+@media(max-width: 1450px) {
+    #extra{
+        grid-template-columns: 300px 300px 300px;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media(max-width: 1330px) {
+    header {
+        height: 70px;
+    }  
+
+    header div {
+        width: 100%;
+        text-align: center;
+        margin: 0px 40px;
+        font-size: 0.85em;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu ul {
+        display: block;
+        position: absolute;
+        width: 300px;
+        top: 70px;
+        right: 10px;
+        background: white;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        border-radius: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    .menu.active ul {
+        height: 260px;
+        border-radius: 0px 0px 30px 30px;
+        visibility: visible;
+        box-shadow: -4px 4px .3em -6px grey;
+    }
+
+    #botao {
+        display: block;
+        padding: .5rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    #hamburguer {
+        color: #012869;
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburguer::after, #hamburguer::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    .menu.active #hamburguer {
+        border-top-color: transparent;
+    }
+
+    .menu.active #hamburguer::before {
+       transform: rotate(135deg);
+    }
+
+    .menu.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    .topico {
+        padding: 0em;
+        margin: 20px
+    }
+
+    /*-----------------------------------*/
+
+    #botao2 {
+        display: block;
+        margin: auto;
+        height: 80px;
+        width: 50%;
+        display: flex;
+        background: none;
+        border: none;
+        cursor: pointer;
+        justify-content: center;
+    }
+
+    #seta1, #seta2 {
+        position: relative;
+        height: 3px;
+        background-color: #012869;
+        width: 25px;
+        top: 45%;
+        transition: .3s;
+    }
+
+    #seta1 {
+        transform: rotate(-45deg);
+        right: -4.5px;
+    }
+
+    #seta2 {
+        transform: rotate(45deg);
+        right: 4.5px;
+    }
+
+    .navigation {
+        top: auto;
+        bottom: 0;
+        height: 80px;
+        width: 100vw;
+        float: none;
+        background-color: white;
+        z-index: 1000;
+        box-shadow: 0 0 .2em -2px grey;
+    }
+
+    .navigation ul {
+        position: absolute;
+        right: 20%;
+        width: 60%;
+        height: 0px;
+        bottom: 80px;
+        background-color: #ff616d;
+        border-radius: 30px 30px 0px 0px;
+        overflow-y: hidden;
+        visibility: hidden;
+        transition: .6s;
+        z-index: 1000;
+        border: 5px solid #ff616d;
+    }
+
+    .navigation.active ul {
+        height: 520px;
+        visibility: visible;
+    }
+
+    .navigation.active #seta1 {
+        transform: rotate(45deg);
+    }
+
+    .navigation.active #seta2 {
+        transform: rotate(-45deg);
+    }
+
+/*----------------------------------------------------------*/
+
+    .op {
+        padding: 1.75em 1.5em 3em 1.5em;
+    }
+
+    .mais.op {
+        padding: 3.35em 0em 3.5em 0em;
+    }
+
+    #extra {
+        grid-template-columns: 350px 350px;
+    }
+    
+    .texto h2 {
+        font-size: 4.2em;
+    }
+    
+    .texto p{
+        font-size: 30px;
+    }
+    
+    .referencia {
+        font-size: 30px;
+    }
+    
+    .imagem {
+        float: none;
+        width: 70%;
+        display: block;
+        margin: auto;
+    }
+    
+    .primeiro {
+        margin-top: 40px;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+@media(max-width: 750px) {
+    #extra{
+        grid-template-columns: 90%;
+    }
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media(max-width: 500px) {
+    header {
+        height: 50px;
+    }
+
+    #logo {
+        width: 4em;
+    }
+
+    header div {
+        margin: 0px 20px;
+        font-size: 0.7em;
+    }
+
+    .menu ul {
+        width: 200px;
+        top: 50px;
+    }
+
+    .menu.active ul {
+        height: 175px;
+    }
+
+    .topico {
+        margin: 10px;
+    }
+
+    /*-----------------------------------*/
+    .navigation {
+        height: 50px;
+    }
+
+    #botao2 {
+        height: 50px;
+    }
+
+    #seta1, #seta2 {
+        width: 18px;
+        height: 3px;
+    }
+
+    #seta1 {
+        right: -3.5px;
+    }
+
+    #seta2 {
+        right: 3.5px;
+    }
+
+    .navigation ul {
+        font-size: 0.7em;
+        bottom: 50px;
+    }
+
+    .navigation.active ul {
+        height: 280px;
+        overflow-y: auto;
+    }
+
+    /*-----------------------------------*/
+    .op {
+        padding: 1.75em 0.75em 2em 0.75em;
+    }
+
+    .mais.op {
+        padding: 3.35em 0em 3.5em 0em;
+    }
+    
+    .texto h2 {
+        font-size: 2em;
+    }
+    
+    .texto p{
+        font-size: 21px;
+    }
+    
+    .referencia {
+        font-size: 21px;
+    }
+    
+    .imagem {
+        width: 90%;
+    }
+
+    .op.mais {
+        padding: 2.4em 0em 2.4em 0em;
+    }
+
+    #musica {
+        font-size: 17px;
+    }
+}

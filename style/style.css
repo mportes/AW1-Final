@@ -1,0 +1,504 @@
+@font-face {
+    font-family: Warung;
+    src: url(../fonts/Warung\ Kopi.otf);
+}
+
+@font-face{
+    font-family: Sweet;
+    src: url(../fonts/sweet\ purple.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body  {
+    background: #a374d5;
+    height: 100vh;
+    color: white;
+    font-family: Warung;
+    font-size: 1.7em;
+}
+
+/*----------------------------------------------------------*/
+#logo {
+    width: 5em;
+    padding: 5px;
+}
+
+header {
+    height: 80px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 .2em -2px grey;
+    z-index: 1;
+    display: flex;
+}
+
+header div {
+    display: flex;
+    width: 1100px;
+    margin: auto;
+    justify-content: space-around;
+}
+
+#botao {
+    display: none;
+}
+
+.topico {
+   padding: 0.9em;
+}
+  
+.menu a {
+    text-decoration: none;
+    color: #012869;
+    transition: color .3s;
+}
+
+a:hover {
+    color: #a374d5;
+}
+  
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+  
+.menu li {
+    list-style: none;
+}
+
+/*----------------------------------------------------------*/
+
+.introducao h1{
+    font-family: Sweet;
+    font-size: 8em;
+    font-weight: normal;
+    width: 1000px;
+    margin: auto;
+}
+
+#saude {
+    margin-top: 0.2em;
+}
+
+#adol {
+    padding-left: 0.65em;
+    line-height: 0.3;
+}
+
+#imagem {
+    height: 680px;
+    position: relative;
+    top: -110px;
+    float: left;
+    z-index: -1;
+}
+
+#textinho {
+    margin-top: 120px;
+    font-size: 38px;
+    margin-left: 750px;
+    line-height: 1.4;
+    width: 43%;
+    text-align: justify;
+}
+
+#seta {
+    transform: rotate(60deg);
+    margin: auto;
+    width: 90px;
+    margin: 30px 0px 150px 200px;
+}
+
+/*----------------------------------------------------------*/
+
+.sobre {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    padding-bottom: 70px;
+    border-radius: 30px;
+}
+
+#margem {
+    width: 1200px;
+    margin: auto;
+}
+
+.sobre h2 {
+    font-family: Sweet;
+    font-size: 5em;
+    font-weight: normal;
+    color: #012869;
+}
+
+.sobre p {
+    color: #012869;
+    margin-top: 1.2em;
+    font-size: 38px;
+    line-height: 1.7em;
+    text-align: justify;
+}
+
+.sobre p span {
+    color:#a374d5;
+}
+/*----------------------------------------------------------*/
+
+.rodape {
+    background-color: #012869;
+    margin-top: 150px;
+    padding: 30px;
+    width: 100%;
+}
+
+#logo2 {
+    width: 250px;
+}
+
+.rodape div {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodape a {
+    color: #a374d5;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+.rodape p {
+    margin-top: 15px;
+    text-align: center;
+    font-size: .8em;
+}
+
+#popup {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: rgb(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup-square {
+    background-color: white;
+    width: 60%;
+    height: 60%;
+    border-radius: 40px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#popup-content {
+    color: rgb(50, 50, 50);
+    font-size: 4em;
+    text-align: center;
+}
+
+#closeButton {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+#popup.closed {
+    display: none;
+}
+
+/*----------------------------------------------------------*/
+@media(max-width: 1681px) {
+    #textinho {
+        margin-bottom: 200px;
+    }
+
+    #seta {
+        display: none;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media(max-width: 1330px) {
+    header {
+        height: 70px;
+    }  
+
+    header div {
+        width: 100%;
+        text-align: center;
+        margin: 0px 40px;
+        font-size: 0.85em;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #botao {
+        display: block;
+    }
+
+    .menu ul {
+        display: block;
+        position: absolute;
+        width: 300px;
+        top: 70px;
+        right: 10px;
+        background: white;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        border-radius: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    .menu.active ul {
+        height: 260px;
+        border-radius: 0px 0px 30px 30px;
+        visibility: visible;
+        box-shadow: -4px 4px .3em -6px grey;
+    }
+
+    #botao {
+        padding: .5rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    #hamburguer {
+        color: #012869;
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburguer::after, #hamburguer::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    .menu.active #hamburguer {
+        border-top-color: transparent;
+    }
+
+    .menu.active #hamburguer::before {
+       transform: rotate(135deg);
+    }
+
+    .menu.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    .topico {
+        padding: 0em;
+        margin: 20px 20px;
+    }
+
+    /*-----------------------------------*/ 
+    .introducao h1{
+        font-size: 5em;
+        width: 500px;
+        margin-left: 0.8em;
+    }
+    
+    #saude {
+        margin-top: 0.4em;
+    }
+    
+    #adol {
+        padding-left: 0.65em;
+        line-height: 0.3;
+    }
+    
+    #imagem {
+        height: 400px;
+        top: 0px;
+    }
+    
+    #textinho {
+        margin-top: 70px;
+        font-size: 24px;
+        margin-left: 420px;
+        line-height: 1.6;
+        width: 40%;
+        margin-bottom: 80px;
+    }
+    
+    #seta {
+        display: none;
+    }
+    /*-----------------------------------*/ 
+    .sobre {
+        width: 90%;
+        padding-bottom: 40px;
+    }
+    
+    #margem {
+        width: 600px;
+    }
+    
+    .sobre h2 {
+        font-size: 3em;
+    }
+    
+    .sobre p {
+        margin-top: 1.2em;
+        font-size: 24px;
+        line-height: 2em;
+    }
+    /*-----------------------------------*/ 
+    .rodape {
+        margin-top: 110px;
+        padding: 20px;
+    }
+    
+    #logo2 {
+        width: 150px;
+    }
+    
+    .rodape div {
+        width: 300px;
+    }
+    
+    .rodape p {
+        margin-top: 15px;
+        font-size: .65em;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media(max-width: 700px) {
+    header {
+        height: 50px;
+    }
+
+    #logo {
+        width: 4em;
+    }
+
+    header div {
+        margin: 0px 20px;
+        font-size: 0.7em;
+    }
+
+    .menu ul {
+        width: 200px;
+        top: 50px;
+    }
+
+    .menu.active ul {
+        height: 175px;
+    }
+
+    .topico {
+        margin: 10px;
+    }
+
+    /*-----------------------------------*/ 
+    .introducao h1{
+        font-size: 2.8em;
+        width: 300px;
+        margin-left: 0.2em;
+    }
+    
+    #saude {
+        margin-top: 0.6em;
+    }
+    
+    #adol {
+        padding-left: 0.65em;
+        line-height: 0.3;
+    }
+    
+    #imagem {
+        float: none;
+        height: 350px;
+        top: 40px;
+    }
+    
+    #textinho {
+        font-size: 21px;
+        line-height: 1.6;
+        width: 80%;
+        margin: auto;
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+
+    #seta {
+        display: block;
+        width: 70px;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+
+    /*-----------------------------------*/ 
+    .sobre {
+        width: 90%;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    
+    #margem {
+        width: 80%;
+    }
+    
+    .sobre h2 {
+        font-size: 1.68em;
+    }
+    
+    .sobre p {
+        margin-top: 1.2em;
+        font-size: 21px;
+        line-height: 1.7em;
+    }
+    /*-----------------------------------*/ 
+    .rodape {
+        margin-top: 70px;
+        padding: 15px;
+    }
+    
+    #logo2 {
+        width: 120px;
+    }
+    
+    .rodape div {
+        width: 250px;
+    }
+    
+    .rodape p {
+        margin-top: 10px;
+        font-size: .55em;
+    }
+}
